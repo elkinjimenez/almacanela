@@ -12,8 +12,6 @@ export class LateralComponent implements OnInit {
     @Host() @Optional() public modulos: ModulosComponent,
   ) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
 }

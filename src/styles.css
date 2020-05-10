@@ -13,19 +13,60 @@
   transition: 0.4s;
 }
 
-.sidebar a:hover {
-  color: #818181;
-}
-
 .pointer{
   cursor: pointer;
 }
 
-
-.menu-activo{
-  background-color: red;
+.menu-inactivo {
+  height: 8vh;
+  -webkit-transition: height 1s, background 1s;
+  -moz-transition: height 1s, background 1s;
+  -o-transition: height 1s, background 1s;
+  transition: height 1s, background 1s;
 }
 
-.menu-inactivo{
-  background-color: blue;
+.menu-activo {
+  height: 84vh;
+  -webkit-transition: height 1s, background 1s;
+  -moz-transition: height 1s, background 1s;
+  -o-transition: height 1s, background 1s;
+  transition: height 1s, background 1s;
+}
+
+
+.limpiar-menu {
+  display: none;
+}
+
+.poblar-menu{
+  display: block;
+}
+
+.botonMenu{
+  display: none;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+
+
+@media (max-width: 992px) {
+  .botonMenu{
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .limpiar-menu {
+    display: block;
+  }
+
+  .menu-inactivo {
+    height: 84vh;
+    -webkit-transition: height 1s, background 1s;
+    -moz-transition: height 1s, background 1s;
+    -o-transition: height 1s, background 1s;
+    transition: height 1s, background 1s;
+  }
 }
