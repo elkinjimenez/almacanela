@@ -21,7 +21,7 @@ import { PersistenceModule } from 'angular-persistence';
     MenuModule,
     FormsModule,
     HttpClientModule,
-    PersistenceModule
+    PersistenceModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

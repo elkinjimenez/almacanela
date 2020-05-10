@@ -1,1 +1,21 @@
 <app-nabvar></app-nabvar>
+<div class="container-fluid pt-5">
+  <div class="row mt-4 px-2">
+    <div class="col-sm-3 px-2">
+      <div class="card {{menu.clase}} mb-3 z-depth-0 overflow-auto" style="height: 86vh;">
+        <div class="card-body">
+          <!-- MENU LATERAL -->
+          <app-lateral></app-lateral>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="col-sm-9 px-2">
+      <div class="card z-depth-0 overflow-auto" style="height: 86vh;">
+        <div class="card-body">
+          <h1>ere</h1>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

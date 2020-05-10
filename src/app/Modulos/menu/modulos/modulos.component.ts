@@ -8,6 +8,8 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class ModulosComponent implements OnInit {
 
+  menu = { icono: 'far fa-times-circle', estado: true, clase: 'menu-activo' };
+
   constructor(
     @Host() @Optional() public init: AppComponent,
   ) { }

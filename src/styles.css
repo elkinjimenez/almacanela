@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+.sidebar {
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  padding: 5px 5px 5px 32px;
+  text-decoration: none;
+  display: block;
+  transition: 0.4s;
+}
+
+.sidebar a:hover {
+  color: #818181;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+.menu-activo{
+  background-color: red;
+}
+
+.menu-inactivo{
+  background-color: blue;
+}

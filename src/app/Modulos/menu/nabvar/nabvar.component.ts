@@ -12,6 +12,8 @@ declare var $: any;
 })
 export class NabvarComponent implements OnInit {
 
+  menu = 'menu-activo';
+
   constructor(
     @Host() @Optional() public modulos: ModulosComponent,
     private persistencia: PersistenceService,
@@ -27,6 +29,15 @@ export class NabvarComponent implements OnInit {
       this.persistencia.removeAll(StorageType.SESSION);
       this.persistencia.clean(StorageType.SESSION);
     }, 600);
+  }
+
+  accionarMenu() {
+    if (this.modulos.menu.estado) {
+      this.modulos.menu.clase = 'menu-inactivo';
+    } else {
+      this.modulos.menu.clase = 'menu-activo';
+    }
+    this.modulos.menu.estado = !this.modulos.menu.estado;
   }
 
 }
