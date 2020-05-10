@@ -2,11 +2,11 @@ import { Component, OnInit, Host, Optional } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
-  selector: 'app-modulos',
-  templateUrl: './modulos.component.html',
-  styleUrls: ['./modulos.component.css']
+  selector: 'app-modal-notifica',
+  templateUrl: './modal-notifica.component.html',
+  styleUrls: ['./modal-notifica.component.css']
 })
-export class ModulosComponent implements OnInit {
+export class ModalNotificaComponent implements OnInit {
 
   constructor(
     @Host() @Optional() public init: AppComponent,

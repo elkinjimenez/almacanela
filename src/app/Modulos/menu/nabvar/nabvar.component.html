@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light white z-depth-0">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-effect waves-light" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+          <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+          <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <div class="d-flex justify-content-between">
+      <div class="text-right mx-2">
+        <h6 class="small font-weight-bold m-0 p-0">{{modulos.init.Usuario.idPersona.nombres}}</h6>
+        <h6 class="m-0 p-0 small"><span class="spinner-grow spinner-grow-sm text-success" role="status"
+            aria-hidden="true"></span> {{modulos.init.Usuario.idRol.nombre}}</h6>
+      </div>
+      <a data-toggle="modal" data-target="#modalUsuario"><i class="far fa-user-circle fa-2x"></i></a>
+    </div>
+  </div>
+</nav>
+<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-header">
+          <h4 class="font-weight-bold">{{modulos.init.Usuario.idPersona.nombres}}</h4>
+          <a data-dismiss="modal" class="fas fa-times-circle close purple-ic"></a>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h2>Contenido</h2>
+              <button (click)="cerrarSesion()" class="btn btn-danger">Cerrar sesión</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
