@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalNotificaComponent } from './Compartidos/modal-notifica/modal-notifica.component';
 import { PersistenceModule } from 'angular-persistence';
+import { ReferenciasModule } from './Modulos/Referencias/referencias.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PersistenceModule } from 'angular-persistence';
     FormsModule,
     HttpClientModule,
     PersistenceModule,
+    ReferenciasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

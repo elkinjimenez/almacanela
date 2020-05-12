@@ -42,45 +42,45 @@ export class LogueoComponent implements OnInit {
         this.usuarios = data as Usuario[];
         if (this.usuarios.length > 0) {
           $('#modalNotifica').modal('hide');
-          this.pages.init.Usuario = this.usuarios[0];
-          this.pages.init.notifica = {
-            color: 'success-color',
-            mensaje: 'Hola ' + this.pages.init.Usuario.idPersona.nombres + '.',
-            nombre: '¡Bienvenido!',
-            estado: true
-          };
-          this.esperarAbrir();
+          setTimeout(() => {
+            this.pages.init.Usuario = this.usuarios[0];
+            this.pages.init.notifica = {
+              color: 'success-color',
+              mensaje: 'Hola ' + this.pages.init.Usuario.idPersona.nombres + '.',
+              nombre: '¡Bienvenido!',
+              estado: true
+            };
+            $('#modalNotifica').modal('show');
+          }, 600);
           this.pages.init.logueado = true;
           this.persistencia.set('logueado', this.pages.init.logueado, { type: StorageType.SESSION });
-          this.persistencia.set('usuarioL', this.pages.init.Usuario, { type: StorageType.SESSION })
+          this.persistencia.set('usuarioL', this.pages.init.Usuario, { type: StorageType.SESSION });
         } else {
           $('#modalNotifica').modal('hide');
-          this.pages.init.notifica = {
-            color: 'danger-color',
-            mensaje: 'No se encuentra usuario con esas credenciales. Por favor intente de nuevo.',
-            nombre: 'Nuevo intento',
-            estado: true
-          };
-          this.esperarAbrir();
+          setTimeout(() => {
+            this.pages.init.notifica = {
+              color: 'danger-color',
+              mensaje: 'No se encuentra usuario con esas credenciales. Por favor intente de nuevo.',
+              nombre: 'Nuevo intento',
+              estado: true
+            };
+            $('#modalNotifica').modal('show');
+          }, 600);
         }
       }, error => {
         console.log('Error Logueo: ', error);
         $('#modalNotifica').modal('hide');
-        this.pages.init.notifica = {
-          color: 'danger-color',
-          mensaje: 'No le logró validar el usuario que solicitó, Por favor intente de nuevo.',
-          nombre: 'Nuevo intento',
-          estado: true
-        };
-        this.esperarAbrir();
+        setTimeout(() => {
+          this.pages.init.notifica = {
+            color: 'danger-color',
+            mensaje: 'No le logró validar el usuario que solicitó, Por favor intente de nuevo.',
+            nombre: 'Nuevo intento',
+            estado: true
+          };
+          $('#modalNotifica').modal('show');
+        }, 600);
       },
     );
-  }
-
-  esperarAbrir() {
-    setTimeout(() => {
-      $('#modalNotifica').modal('show');
-    }, 600);
   }
 
 }
