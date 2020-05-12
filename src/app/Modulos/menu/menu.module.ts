@@ -5,9 +5,10 @@ import { NabvarComponent } from './nabvar/nabvar.component';
 import { PersistenceModule } from 'angular-persistence';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { LateralComponent } from './lateral/lateral.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
-  declarations: [ModulosComponent, NabvarComponent, LateralComponent],
+  declarations: [ModulosComponent, NabvarComponent, LateralComponent, InfoComponent],
   imports: [
     CommonModule,
     PersistenceModule,

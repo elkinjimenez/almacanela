@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LangingModule } from './Modulos/langing/langing.module';
-import { PagesComponent } from './Modulos/langing/pages/pages.component';
+import { InfoComponent } from './Modulos/menu/info/info.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: PagesComponent },
-  // { path: '**', component: PagesComponent },
+  { path: '', component: InfoComponent },
+  { path: '**', component: InfoComponent },
 ];
 
 @NgModule({
