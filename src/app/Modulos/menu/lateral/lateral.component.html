@@ -1,55 +1,49 @@
 <div class="sidebar">
   <div class="accordion" id="accordion-menu">
-    <div id="cabecera-empleados">
-      <a class="h5 pointer" type="button" data-toggle="collapse" data-target="#item-empleados" aria-expanded="true"
-        aria-controls="item-empleados"> Empleados
+    <!-- PRIMER PAQUETE -->
+    <div id="cabecera-referencias">
+      <a class="h5 pointer" type="button" data-toggle="collapse" data-target="#item-referencias" aria-expanded="true"
+        aria-controls="item-referencias"> Referencias
       </a>
     </div>
-    <div id="item-empleados" class="collapse show" aria-labelledby="cabecera-empleados" data-parent="#accordion-menu">
-      <a routerLink='/home/empleados' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Lista de empleados
+    <div id="item-referencias" class="collapse show" aria-labelledby="cabecera-referencias"
+      data-parent="#accordion-menu">
+      <a routerLink='' class="h6 text-primary">
+        <i class="fas fa-angle-right"></i> Lista de referencias
       </a>
-      <a routerLink='/home/empleados/nuevo' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Nuevo empleado
+      <a routerLink='' class="h6 text-primary">
+        <i class="fas fa-angle-right"></i> Lista de líneas
       </a>
-      <a routerLink='/home/empleados/carga-masiva' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Carga masiva
-      </a>
-    </div>
-    <div id="cabecera-novedades">
-      <a class="h5 pointer collapsed" type="button" data-toggle="collapse" data-target="#item-novedades"
-        aria-expanded="false" aria-controls="item-novedades"> Novedades
+      <a routerLink='' class="h6 text-primary">
+        <i class="fas fa-angle-right"></i> lista de moldes
       </a>
     </div>
-    <div id="item-novedades" class="collapse" aria-labelledby="cabecera-novedades" data-parent="#accordion-menu">
-      <a routerLink='/home/novedades/novedades' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> lista de novedades
-      </a>
-      <a routerLink='/home/novedades/nueva' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Nueva novedad
+    <!-- SEGUNDO PAQUETE -->
+    <div id="cabecera-inventario">
+      <a class="h5 pointer collapsed" type="button" data-toggle="collapse" data-target="#item-inventario"
+        aria-expanded="false" aria-controls="item-inventario"> Inventario
       </a>
     </div>
-    <div id="cabecera-proyectos">
-      <a class="h5 pointer collapsed" type="button" data-toggle="collapse" data-target="#item-proyectos"
-        aria-expanded="false" aria-controls="item-proyectos"> Proyectos
+    <div id="item-inventario" class="collapse" aria-labelledby="cabecera-inventario" data-parent="#accordion-menu">
+      <a routerLink='' class="h6 text-primary">
+        <i class="fas fa-angle-right"></i> Entradas
+      </a>
+      <a routerLink='' class="h6 text-primary">
+        <i class="fas fa-angle-right"></i> Salidas
       </a>
     </div>
-    <div id="item-proyectos" class="collapse" aria-labelledby="cabecera-proyectos" data-parent="#accordion-menu">
+    <!-- TERCER PAQUETE -->
+    <div id="cabecera-articulos">
+      <a class="h5 pointer collapsed" type="button" data-toggle="collapse" data-target="#item-articulos"
+        aria-expanded="false" aria-controls="item-articulos"> Artículos
+      </a>
+    </div>
+    <div id="item-articulos" class="collapse" aria-labelledby="cabecera-articulos" data-parent="#accordion-menu">
       <a routerLink='/home/proyectos/lista' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Lista de proyectos
+        <i class="fas fa-angle-right"></i> Lista de artículos
       </a>
       <a routerLink='/home/proyectos/nuevo' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Nuevo proyecto
-      </a>
-    </div>
-    <div id="cabecera-dnf">
-      <a class="h5 pointer collapsed" type="button" data-toggle="collapse" data-target="#item-dnf" aria-expanded="false"
-        aria-controls="item-dnf"> DNF
-      </a>
-    </div>
-    <div id="item-dnf" class="collapse" aria-labelledby="cabecera-dnf" data-parent="#accordion-menu">
-      <a routerLink='/home/dnf/generar' class="h6 text-primary">
-        <i class="fas fa-angle-right"></i> Generar
+        <i class="fas fa-angle-right"></i> Estadísticas
       </a>
     </div>
   </div>
