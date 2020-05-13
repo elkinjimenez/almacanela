@@ -50,13 +50,13 @@
 }
 
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .botonMenu{
     display: block;
   }
 }
 
-@media (min-width: 1199px) {
+@media (min-width: 991px) {
 
   .limpiar-menu {
     display: block;

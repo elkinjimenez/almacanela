@@ -8,6 +8,7 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class ModulosComponent implements OnInit {
 
+  volverAtrás = { estado: false, ruta: '' };
   menu = { icono: 'fas fa-angle-up fadeInUp', estado: true, clase: 'menu-activo', campos: 'poblar-menu' };
 
   constructor(

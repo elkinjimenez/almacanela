@@ -6,6 +6,7 @@ import { ListarMoldesComponent } from './Moldes/listar-moldes/listar-moldes.comp
 import { VerMoldeComponent } from './Moldes/ver-molde/ver-molde.component';
 import { EditarMoldeComponent } from './Moldes/editar-molde/editar-molde.component';
 import { EliminarMoldeComponent } from './Moldes/eliminar-molde/eliminar-molde.component';
+import { MenuModule } from '../menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EliminarMoldeComponent } from './Moldes/eliminar-molde/eliminar-molde.c
     EliminarMoldeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MenuModule
   ]
 })
 export class ReferenciasModule { }

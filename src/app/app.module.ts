@@ -13,7 +13,7 @@ import { ReferenciasModule } from './Modulos/Referencias/referencias.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ModalNotificaComponent,
+    ModalNotificaComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +25,7 @@ import { ReferenciasModule } from './Modulos/Referencias/referencias.module';
     PersistenceModule,
     ReferenciasModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

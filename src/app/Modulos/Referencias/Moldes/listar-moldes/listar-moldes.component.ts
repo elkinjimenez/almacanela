@@ -12,4 +12,8 @@ export class ListarMoldesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  consumirListaMoldes(){
+
+  }
+
 }

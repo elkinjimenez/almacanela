@@ -6,15 +6,23 @@ import { PersistenceModule } from 'angular-persistence';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { LateralComponent } from './lateral/lateral.component';
 import { InfoComponent } from './info/info.component';
+import { VolverComponent } from './volver/volver.component';
 
 @NgModule({
-  declarations: [ModulosComponent, NabvarComponent, LateralComponent, InfoComponent],
+  declarations: [
+    ModulosComponent,
+    NabvarComponent,
+    LateralComponent,
+    InfoComponent,
+    VolverComponent
+  ],
   imports: [
     CommonModule,
     PersistenceModule,
     AppRoutingModule
   ], exports: [
     ModulosComponent,
+    VolverComponent
   ]
 })
 export class MenuModule { }
