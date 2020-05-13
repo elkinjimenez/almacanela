@@ -38,7 +38,7 @@ export class LogueoComponent implements OnInit {
     $('#modalNotifica').modal('show');
     this.usuarioS.getLogin(this.datos.usuario, this.datos.clave).subscribe(
       data => {
-        console.log('Usuario: ', 'Ingreso a WS');
+        console.log('Usuario: ', data);
         this.usuarios = data as Usuario[];
         if (this.usuarios.length > 0) {
           $('#modalNotifica').modal('hide');
@@ -54,7 +54,7 @@ export class LogueoComponent implements OnInit {
           }, 600);
           this.pages.init.logueado = true;
           this.persistencia.set('logueado', this.pages.init.logueado, { type: StorageType.SESSION });
-          this.persistencia.set('usuarioL', this.pages.init.Usuario, { type: StorageType.SESSION });
+          this.persistencia.set('usuarioL', this.usuarios[0], { type: StorageType.SESSION });
         } else {
           $('#modalNotifica').modal('hide');
           setTimeout(() => {

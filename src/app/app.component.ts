@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   logueado = false;
 
-  Usuario: Usuario;
+  Usuario = {} as Usuario;
 
   notifica: Notificacion = { color: 'purple', mensaje: 'No hay mensajes aún.', nombre: 'Mensajes', estado: true };
 
@@ -21,17 +21,10 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     const logueadoE = this.persistencia.get('logueado', StorageType.SESSION);
     console.log('MANTIENE: ', logueadoE);
     if (logueadoE !== undefined) {
       this.logueado = logueadoE;
-      const usuarioL = this.persistencia.get('usuarioL', StorageType.SESSION);
-      if (usuarioL !== undefined) {
-        this.Usuario = usuarioL;
-      } else {
-        this.logueado = false;
-      }
     } else {
       this.logueado = false;
     }

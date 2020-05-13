@@ -19,7 +19,14 @@ export class NabvarComponent implements OnInit {
     private persistencia: PersistenceService,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    const usuarioL = this.persistencia.get('usuarioL', StorageType.SESSION);
+    if (usuarioL !== undefined) {
+      this.modulos.init.Usuario = usuarioL;
+      console.log('USUARIOOO', usuarioL);
+    } else {
+      this.modulos.init.logueado = false;
+    }
   }
 
   cerrarSesion() {
