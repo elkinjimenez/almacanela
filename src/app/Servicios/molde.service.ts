@@ -8,4 +8,11 @@ export class MoldeService {
 
   constructor(private http: HttpClient) { }
 
+  server = 'https://almacanelalean.com';
+
+  getMoldes() {
+    const URL = this.server + '/wsalmacanela/webresources/entity.molde';
+    return this.http.get(URL);
+  }
+
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Notificacion } from './Modelos/AlertaNotificacion';
+import { Notificacion } from './Modelos/alertaNotificacion';
 import { Usuario } from './Modelos/usuario';
 import { PersistenceService, StorageType } from 'angular-persistence';
 

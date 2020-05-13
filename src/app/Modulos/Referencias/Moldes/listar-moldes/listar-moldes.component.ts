@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoldeService } from 'src/app/Servicios/molde.service';
 
 @Component({
   selector: 'app-listar-moldes',
@@ -7,13 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarMoldesComponent implements OnInit {
 
-  constructor() { }
+  moldes: any;
+
+  constructor(
+    private servicioMolde: MoldeService,
+  ) { }
 
   ngOnInit(): void {
+    this.consumirListaMoldes();
   }
 
-  consumirListaMoldes(){
-
+  consumirListaMoldes() {
+    this.servicioMolde.getMoldes().subscribe(
+      data => {
+        console.log('Moldes resp: ', data);
+        this.moldes = data;
+      }, error => {
+        console.log('Error moldes: ', error);
+      }
+    )
   }
 
 }
