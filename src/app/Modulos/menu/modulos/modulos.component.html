@@ -1,11 +1,27 @@
 <app-nabvar></app-nabvar>
 <div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 px-2">
+      <div class="card {{menu.clase}} mb-2 z-depth-0 overflow-auto">
+        <div class="card-body {{menu.campos}}">
+          <app-lateral></app-lateral>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 px-2">
+      <div class="card z-depth-0" style="height: 87vh;">
+        <div class="card-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-nabvar></app-nabvar>
+<div class="container-fluid">
   <div class="row px-2">
     <div class="col-lg-3 px-2">
       <div class="card {{menu.clase}} mb-2 z-depth-0 overflow-auto animated fadeIn">
-        <a class="botonMenu" (click)="accionarMenu()">
-          <i class="{{menu.icono}} light-ic animated infinite fa-2x"></i>
-        </a>
         <div class="card-body {{menu.campos}}">
           <app-lateral></app-lateral>
         </div>
@@ -19,4 +35,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

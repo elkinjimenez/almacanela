@@ -38,4 +38,15 @@ export class NabvarComponent implements OnInit {
     }, 600);
   }
 
+  accionarMenu() {
+    if (this.modulos.menu.estado) {
+      this.modulos.menu.clase = 'menu-inactivo';
+      this.modulos.menu.campos = 'limpiar-menu';
+    } else {
+      this.modulos.menu.clase = 'menu-activo';
+      this.modulos.menu.campos = 'poblar-menu';
+    }
+    this.modulos.menu.estado = !this.modulos.menu.estado;
+  }
+
 }
