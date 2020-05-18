@@ -1,0 +1,71 @@
+<div class="modal fade" id="nuevoModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-header">
+          <h4 class="font-weight-bold">Nuevo molde</h4>
+          <a data-dismiss="modal" class="fas fa-times-circle close purple-ic"></a>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xl-6 mb-2">
+              <label for="listaLineas">Seleccione una línea</label>
+              <select id="listaLineas" name="listaLineas" class="browser-default custom-select">
+                <option selected disabled>Seleccione</option>
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="col-xl-6 mb-2">
+              <label for="listaLineas">Seleccione una parte de la línea</label>
+              <select id="listaLineas" name="listaLineas" class="browser-default custom-select">
+                <option selected disabled>Seleccione</option>
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="col-xl-6 mb-2">
+              <label for="listaLineas">Seleccione un componente de la parte</label>
+              <select id="listaLineas" name="listaLineas" class="browser-default custom-select">
+                <option selected disabled>Seleccione</option>
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="col-xl-6 mb-2">
+              <label for="listaLineas">Seleccione una pieza del componente</label>
+              <select id="listaLineas" name="listaLineas" class="browser-default custom-select">
+                <option selected disabled>Seleccione</option>
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="col-6">
+              <div class="md-form md-outline">
+                <input type="text" id="form1" class="form-control">
+                <label for="form1">Consumo</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="md-form md-outline">
+                <input type="text" id="form1" class="form-control">
+                <label for="form1">Desperdicio</label>
+              </div>
+            </div>
+            <div class="col-12 mb-4">
+              <label for="">Carga una imagen del molde</label>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                <label class="custom-file-label" for="customFileLang">Seleccionar imagen</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <button data-dismiss="modal"
+                class="btn btn-block btn-outline-secondary btn-lg font-weight-bold">Cancelar</button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-block btn-purple btn-lg font-weight-bold">Crear molde</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

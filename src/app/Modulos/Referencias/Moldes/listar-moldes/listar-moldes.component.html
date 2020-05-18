@@ -1,4 +1,10 @@
-<h4 class="font-weight-bold">
-  <app-volver></app-volver> Moldes
-</h4>
+<div class="d-flex justify-content-between">
+  <h4 class="font-weight-bold">
+    <app-volver></app-volver> Moldes
+  </h4>
+  <button data-toggle="modal" data-target="#nuevoModel" class="btn btn-purple rounded-pill font-weight-bold"><i
+      class="fas fa-plus fa-lg"></i> Nuevo molde</button>
+</div>
+
 {{moldes | json}}
+<app-crear-molde></app-crear-molde>

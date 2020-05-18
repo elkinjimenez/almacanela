@@ -7,6 +7,7 @@ import { VerMoldeComponent } from './Moldes/ver-molde/ver-molde.component';
 import { EditarMoldeComponent } from './Moldes/editar-molde/editar-molde.component';
 import { EliminarMoldeComponent } from './Moldes/eliminar-molde/eliminar-molde.component';
 import { MenuModule } from '../menu/menu.module';
+import { CrearMoldeComponent } from './Moldes/crear-molde/crear-molde.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MenuModule } from '../menu/menu.module';
     ListarMoldesComponent,
     VerMoldeComponent,
     EditarMoldeComponent,
-    EliminarMoldeComponent
+    EliminarMoldeComponent,
+    CrearMoldeComponent
   ],
   imports: [
     CommonModule,
