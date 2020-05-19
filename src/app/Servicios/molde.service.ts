@@ -8,8 +8,8 @@ export class MoldeService {
 
   constructor(private http: HttpClient) { }
 
-  // server = 'https://almacanelalean.com';
-  server = 'http://localhost:8080';
+  server = 'https://almacanelalean.com';
+  // server = 'http://localhost:8080';
 
   getMoldes() {
     const URL = this.server + '/wsalmacanela/webresources/entity.molde';
