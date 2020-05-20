@@ -4,12 +4,14 @@ import { ModalNotificaComponent } from './modal-notifica/modal-notifica.componen
 import { DatosVaciosComponent } from './datos-vacios/datos-vacios.component';
 import { VolverComponent } from './volver/volver.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { BuscandoDatosComponent } from './buscando-datos/buscando-datos.component';
 
 @NgModule({
   declarations: [
     ModalNotificaComponent,
     DatosVaciosComponent,
-    VolverComponent
+    VolverComponent,
+    BuscandoDatosComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   exports: [
     ModalNotificaComponent,
     DatosVaciosComponent,
-    VolverComponent
+    VolverComponent,
+    BuscandoDatosComponent
   ]
 })
 export class ComponentesModule { }

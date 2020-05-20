@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoldeService } from 'src/app/Servicios/molde.service';
+import { Molde } from 'src/app/Modelos/molde';
 
 @Component({
   selector: 'app-listar-moldes',
@@ -9,7 +10,7 @@ import { MoldeService } from 'src/app/Servicios/molde.service';
 export class ListarMoldesComponent implements OnInit {
 
   estado = 0;
-  listadoMoldes: any;
+  listadoMoldes: Molde[];
 
   constructor(
     private servicioMolde: MoldeService,
@@ -23,7 +24,12 @@ export class ListarMoldesComponent implements OnInit {
     this.servicioMolde.getMoldes().subscribe(
       data => {
         console.log('Moldes resp: ', data);
-        this.listadoMoldes = data;
+        this.listadoMoldes = data as Molde[];
+        if (this.listadoMoldes.length > 0) {
+          this.estado = 1;
+        } else {
+          this.estado = 2;
+        }
       }, error => {
         console.log('Error moldes: ', error);
       }

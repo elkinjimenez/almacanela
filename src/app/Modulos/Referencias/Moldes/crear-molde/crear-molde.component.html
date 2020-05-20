@@ -13,7 +13,7 @@
               <label for="listaLineas">Seleccione una línea</label>
               <select id="listaLineas" name="listaLineas" class="browser-default custom-select">
                 <option selected disabled>Seleccione</option>
-                <option value=""></option>
+                <option *ngFor="let l of listadoLineas" value="{{l.idLinea}}">{{l.nombre}}</option>
               </select>
             </div>
             <div class="col-xl-6 mb-2">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-datos-vacios',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./datos-vacios.component.css']
 })
 export class DatosVaciosComponent implements OnInit {
+
+  @Input() mensaje: string;
+  @Input() icono: string;
 
   constructor() { }
 

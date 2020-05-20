@@ -108,3 +108,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #6a1b9a;
 }
+
+
+.list-group-item:hover{
+  color: #6a1b9a;
+}
