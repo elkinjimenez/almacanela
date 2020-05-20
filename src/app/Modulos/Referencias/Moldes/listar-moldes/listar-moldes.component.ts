@@ -8,7 +8,8 @@ import { MoldeService } from 'src/app/Servicios/molde.service';
 })
 export class ListarMoldesComponent implements OnInit {
 
-  lisyadoMoldes: any;
+  estado = 0;
+  listadoMoldes: any;
 
   constructor(
     private servicioMolde: MoldeService,
@@ -22,7 +23,7 @@ export class ListarMoldesComponent implements OnInit {
     this.servicioMolde.getMoldes().subscribe(
       data => {
         console.log('Moldes resp: ', data);
-        this.lisyadoMoldes = data;
+        this.listadoMoldes = data;
       }, error => {
         console.log('Error moldes: ', error);
       }

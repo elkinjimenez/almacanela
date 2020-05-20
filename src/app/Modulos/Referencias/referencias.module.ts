@@ -8,6 +8,7 @@ import { EditarMoldeComponent } from './Moldes/editar-molde/editar-molde.compone
 import { EliminarMoldeComponent } from './Moldes/eliminar-molde/eliminar-molde.component';
 import { MenuModule } from '../menu/menu.module';
 import { CrearMoldeComponent } from './Moldes/crear-molde/crear-molde.component';
+import { ComponentesModule } from 'src/app/Compartidos/Componentes/componentes.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CrearMoldeComponent } from './Moldes/crear-molde/crear-molde.component'
   ],
   imports: [
     CommonModule,
-    MenuModule
+    MenuModule,
+    ComponentesModule
   ]
 })
 export class ReferenciasModule { }

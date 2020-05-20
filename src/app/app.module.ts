@@ -6,14 +6,13 @@ import { LangingModule } from './Modulos/langing/langing.module';
 import { MenuModule } from './Modulos/menu/menu.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalNotificaComponent } from './Compartidos/modal-notifica/modal-notifica.component';
 import { PersistenceModule } from 'angular-persistence';
 import { ReferenciasModule } from './Modulos/Referencias/referencias.module';
+import { ComponentesModule } from './Compartidos/Componentes/componentes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalNotificaComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import { ReferenciasModule } from './Modulos/Referencias/referencias.module';
     FormsModule,
     HttpClientModule,
     PersistenceModule,
-    ReferenciasModule
+    ReferenciasModule,
+    ComponentesModule
   ],
   exports: [],
   providers: [],
