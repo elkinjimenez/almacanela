@@ -9,6 +9,8 @@ import { EliminarMoldeComponent } from './Moldes/eliminar-molde/eliminar-molde.c
 import { MenuModule } from '../menu/menu.module';
 import { CrearMoldeComponent } from './Moldes/crear-molde/crear-molde.component';
 import { ComponentesModule } from 'src/app/Compartidos/Componentes/componentes.module';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from 'src/app/Router/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,12 @@ import { ComponentesModule } from 'src/app/Compartidos/Componentes/componentes.m
   imports: [
     CommonModule,
     MenuModule,
-    ComponentesModule
-  ]
+    ComponentesModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  exports: [
+
+  ],
 })
 export class ReferenciasModule { }

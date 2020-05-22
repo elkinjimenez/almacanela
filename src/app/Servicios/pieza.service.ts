@@ -12,8 +12,8 @@ export class PiezaService {
     private dataSource: DataSourceService,
   ) { }
 
-  getPartePorIdLinea() {
-    const URL = this.dataSource.server + 'http://localhost:8080/wsalmacanela/webresources/entity.pieza/porIdComponente?idComponente=22';
+  getPartePorIdComponente(idComponente: number) {
+    const URL = this.dataSource.server + '/wsalmacanela/webresources/entity.pieza/porIdComponente?idComponente=' + idComponente;
     return this.http.get(URL);
   }
 

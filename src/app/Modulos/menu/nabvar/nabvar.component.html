@@ -32,9 +32,9 @@
     </ul>
     <div class="d-flex justify-content-between">
       <div class="text-right mx-2">
-        <h6 class="small font-weight-bold m-0 p-0">{{modulos.init.Usuario.idPersona.nombres}}</h6>
+        <h6 class="small font-weight-bold m-0 p-0">{{modulos.principal.Usuario.idPersona.nombres}}</h6>
         <h6 class="m-0 p-0 small"><span class="spinner-grow spinner-grow-sm text-success" role="status"
-            aria-hidden="true"></span> {{modulos.init.Usuario.idRol.nombre}}</h6>
+            aria-hidden="true"></span> {{modulos.principal.Usuario.idRol.nombre}}</h6>
       </div>
       <a data-toggle="modal" data-target="#modalUsuario"><i class="far fa-user-circle fa-2x"></i></a>
     </div>
@@ -46,13 +46,13 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="modal-header">
-          <h4 class="font-weight-bold">{{modulos.init.Usuario.idPersona.nombres}}</h4>
+          <h4 class="font-weight-bold">{{modulos.principal.Usuario.idPersona.nombres}}</h4>
           <a data-dismiss="modal" class="fas fa-times-circle close purple-ic"></a>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="col-12 text-center">
-              <h2>{{modulos.init.Usuario.idPersona.nombres}}</h2>
+              <h2>{{modulos.principal.Usuario.idPersona.nombres}}</h2>
               <button (click)="cerrarSesion()" class="btn btn-danger">Cerrar sesión</button>
             </div>
           </div>

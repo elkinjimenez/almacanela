@@ -12,8 +12,8 @@ export class ComponenteService {
     private dataSource: DataSourceService,
   ) { }
 
-  getComponentePorIdParte() {
-    const URL = this.dataSource.server + 'http://localhost:8080/wsalmacanela/webresources/entity.componente/porIdParte?idParte=1';
+  getComponentePorIdParte(idParte: number) {
+    const URL = this.dataSource.server + '/wsalmacanela/webresources/entity.componente/porIdParte?idParte=' + idParte;
     return this.http.get(URL);
   }
 

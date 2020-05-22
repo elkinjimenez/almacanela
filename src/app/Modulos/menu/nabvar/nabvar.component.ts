@@ -22,17 +22,17 @@ export class NabvarComponent implements OnInit {
   ngOnInit() {
     const usuarioL = this.persistencia.get('usuarioL', StorageType.SESSION);
     if (usuarioL !== undefined) {
-      this.modulos.init.Usuario = usuarioL;
+      this.modulos.principal.Usuario = usuarioL;
       console.log('USUARIOOO', usuarioL);
     } else {
-      this.modulos.init.logueado = false;
+      this.modulos.principal.logueado = false;
     }
   }
 
   cerrarSesion() {
     $('#modalUsuario').modal('hide');
     setTimeout(() => {
-      this.modulos.init.logueado = false;
+      this.modulos.principal.logueado = false;
       this.persistencia.removeAll(StorageType.SESSION);
       this.persistencia.clean(StorageType.SESSION);
     }, 600);

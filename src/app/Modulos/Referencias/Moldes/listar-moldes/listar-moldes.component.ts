@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Host, Optional } from '@angular/core';
 import { MoldeService } from 'src/app/Servicios/molde.service';
 import { Molde } from 'src/app/Modelos/molde';
+import { ModulosComponent } from '../../../menu/modulos/modulos.component';
+
+declare var jQuery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-listar-moldes',
@@ -13,10 +17,11 @@ export class ListarMoldesComponent implements OnInit {
   listadoMoldes: Molde[];
 
   constructor(
+    @Optional() public modulos: ModulosComponent,
     private servicioMolde: MoldeService,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.consumirListaMoldes();
   }
 

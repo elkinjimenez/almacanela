@@ -1,6 +1,9 @@
 import { Component, OnInit, Host, Optional } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 
+declare var jQuery: any;
+declare var $: any;
+
 @Component({
   selector: 'app-modulos',
   templateUrl: './modulos.component.html',
@@ -8,13 +11,15 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class ModulosComponent implements OnInit {
 
+  eta = 'elkin';
+
   volverAtrás = { estado: false, ruta: '' };
   menu = { estado: true, clase: 'menu-activo', campos: 'poblar-menu' };
 
   constructor(
-    @Host() @Optional() public init: AppComponent,
+    @Host() @Optional() public principal: AppComponent,
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit() { }
 
 }

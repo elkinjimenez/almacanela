@@ -4,13 +4,15 @@ import { PagesComponent } from './pages/pages.component';
 import { LogueoComponent } from './logueo/logueo.component';
 import { FormsModule } from '@angular/forms';
 import { PersistenceModule } from 'angular-persistence';
+import { AppRoutingModule } from 'src/app/Router/app-routing.module';
 
 @NgModule({
   declarations: [PagesComponent, LogueoComponent],
   imports: [
     CommonModule,
     FormsModule,
-    PersistenceModule
+    PersistenceModule,
+    AppRoutingModule
   ],
   exports: [
     PagesComponent
