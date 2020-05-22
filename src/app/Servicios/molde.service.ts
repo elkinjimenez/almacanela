@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DataSourceService } from './data-source.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoldeService {
 
-  constructor(private http: HttpClient) { }
-
-  server = 'https://almacanelalean.com';
-  // server = 'http://localhost:8080';
+  constructor(
+    private http: HttpClient,
+    private dataSource: DataSourceService,
+  ) { }
 
   getMoldes() {
-    const URL = this.server + '/wsalmacanela/webresources/entity.molde';
+    const URL = this.dataSource.server + '/wsalmacanela/webresources/entity.molde';
     return this.http.get(URL);
   }
 

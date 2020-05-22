@@ -5,15 +5,15 @@ import { DataSourceService } from './data-source.service';
 @Injectable({
   providedIn: 'root'
 })
-export class LineaService {
+export class ComponenteService {
 
   constructor(
     private http: HttpClient,
     private dataSource: DataSourceService,
   ) { }
 
-  getLineas() {
-    const URL = this.dataSource.server + '/wsalmacanela/webresources/entity.linea';
+  getComponentePorIdParte() {
+    const URL = this.dataSource.server + 'http://localhost:8080/wsalmacanela/webresources/entity.componente/porIdParte?idParte=1';
     return this.http.get(URL);
   }
 
