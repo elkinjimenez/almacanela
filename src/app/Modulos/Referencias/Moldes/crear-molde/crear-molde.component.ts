@@ -24,7 +24,8 @@ export class CrearMoldeComponent implements OnInit {
   listadoComponentes = [] as Componente[];
   listadoPiezas = [] as Pieza[];
 
-  datos = { idLinea: 0, idParte: 0, idComponente: 0, idPieza: 0 };
+  datos = { idLinea: 0, idParte: 0, idComponente: 0, idPieza: 0, comsumo: null, desperdicio: null };
+  botonCrear = { estado: false, texto: 'Crear molde' };
 
   constructor(
     @Host() @Optional() public listaMoldes: ListarMoldesComponent,
@@ -34,7 +35,7 @@ export class CrearMoldeComponent implements OnInit {
     private piezaServicio: PiezaService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.consumirLineas();
   }
 
@@ -52,6 +53,7 @@ export class CrearMoldeComponent implements OnInit {
           };
           $('#modalNotifica').modal('show');
         }
+        this.validarEnvio();
       }, error => {
         console.log('Error listado lineas: ', error);
         this.listaMoldes.modulos.principal.notifica = {
@@ -61,6 +63,7 @@ export class CrearMoldeComponent implements OnInit {
           estado: true
         };
         $('#modalNotifica').modal('show');
+        this.validarEnvio();
       }
     );
   }
@@ -86,6 +89,7 @@ export class CrearMoldeComponent implements OnInit {
           };
           $('#modalNotifica').modal('show');
         }
+        this.validarEnvio();
       }, error => {
         console.log('Error partes: ', error);
         this.listaMoldes.modulos.principal.notifica = {
@@ -95,6 +99,7 @@ export class CrearMoldeComponent implements OnInit {
           estado: true
         };
         $('#modalNotifica').modal('show');
+        this.validarEnvio();
       }
     );
   }
@@ -117,6 +122,7 @@ export class CrearMoldeComponent implements OnInit {
           };
           $('#modalNotifica').modal('show');
         }
+        this.validarEnvio();
       }, error => {
         console.log('Error componentes: ', error);
         this.listaMoldes.modulos.principal.notifica = {
@@ -126,6 +132,7 @@ export class CrearMoldeComponent implements OnInit {
           estado: true
         };
         $('#modalNotifica').modal('show');
+        this.validarEnvio();
       }
     );
   }
@@ -137,7 +144,6 @@ export class CrearMoldeComponent implements OnInit {
       data => {
         console.log('Piezas: ', data);
         this.listadoPiezas = data as Pieza[];
-        this.listadoPiezas = [];
         if (this.listadoPiezas.length === 0) {
           this.listaMoldes.modulos.principal.notifica = {
             mensaje: 'No se encontraron piezas registradas, por favor termine la configuración de la línea seleccionada.',
@@ -147,6 +153,7 @@ export class CrearMoldeComponent implements OnInit {
           };
           $('#modalNotifica').modal('show');
         }
+        this.validarEnvio();
       }, error => {
         console.log('Error piezas: ', error);
         this.listaMoldes.modulos.principal.notifica = {
@@ -156,8 +163,23 @@ export class CrearMoldeComponent implements OnInit {
           estado: true
         };
         $('#modalNotifica').modal('show');
+        this.validarEnvio();
       }
     );
+  }
+
+  validarEnvio() {
+    if (this.datos.idLinea !== 0 &&
+      this.datos.idParte !== 0 &&
+      this.datos.idComponente !== 0 &&
+      this.datos.idPieza !== 0 &&
+      this.datos.comsumo !== null &&
+      this.datos.desperdicio !== null
+    ) {
+      this.botonCrear.estado = true;
+    } else {
+      this.botonCrear.estado = false;
+    }
   }
 
 }

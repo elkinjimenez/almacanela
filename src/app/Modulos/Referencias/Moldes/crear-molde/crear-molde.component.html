@@ -36,22 +36,24 @@
             </div>
             <div class="col-xl-6 mb-2">
               <label for="listaPiezas">Seleccione una pieza del componente</label>
-              <select [(ngModel)]="datos.idPieza" [disabled]="listadoPiezas.length===0" id="listaPiezas"
-                name="listaPiezas" class="browser-default custom-select">
+              <select (change)="validarEnvio()" [(ngModel)]="datos.idPieza" [disabled]="listadoPiezas.length===0"
+                id="listaPiezas" name="listaPiezas" class="browser-default custom-select">
                 <option value=0 selected>Seleccione</option>
                 <option *ngFor="let p of listadoPiezas" value={{p.idPieza}}>{{p.nombre}}</option>
               </select>
             </div>
             <div class="col-6">
               <div class="md-form md-outline">
-                <input type="text" id="form1" class="form-control">
-                <label for="form1">Consumo</label>
+                <input (keyup)="validarEnvio()" [(ngModel)]="datos.comsumo" type="number" step="any" id="consumo"
+                  class="form-control">
+                <label for="consumo">Consumo</label>
               </div>
             </div>
             <div class="col-6">
               <div class="md-form md-outline">
-                <input type="text" id="form1" class="form-control">
-                <label for="form1">Desperdicio</label>
+                <input (keyup)="validarEnvio()" [(ngModel)]="datos.desperdicio" type="number" step="any"
+                  id="desperdicio" class="form-control">
+                <label for="desperdicio">Desperdicio</label>
               </div>
             </div>
             <div class="col-12 mb-4">
@@ -66,7 +68,8 @@
                 class="btn btn-block btn-outline-secondary btn-lg font-weight-bold">Cancelar</button>
             </div>
             <div class="col-6">
-              <button class="btn btn-block btn-purple btn-lg font-weight-bold">Crear molde</button>
+              <button [disabled]="!botonCrear.estado"
+                class="btn btn-block btn-purple btn-lg font-weight-bold">{{botonCrear.texto}}</button>
             </div>
           </div>
         </div>
