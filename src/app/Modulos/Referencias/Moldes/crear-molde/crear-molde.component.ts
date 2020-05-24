@@ -19,12 +19,14 @@ declare var $: any;
 })
 export class CrearMoldeComponent implements OnInit {
 
+  imageSrc = '';
+
   listadoLineas = [] as Linea[];
   listadoPartes = [] as Parte[];
   listadoComponentes = [] as Componente[];
   listadoPiezas = [] as Pieza[];
 
-  datos = { idLinea: 0, idParte: 0, idComponente: 0, idPieza: 0, comsumo: null, desperdicio: null };
+  datos = { idLinea: 0, idParte: 0, idComponente: 0, idPieza: 0, comsumo: null, desperdicio: null, imagen: null };
   botonCrear = { estado: false, texto: 'Crear molde' };
 
   constructor(
@@ -180,6 +182,29 @@ export class CrearMoldeComponent implements OnInit {
     } else {
       this.botonCrear.estado = false;
     }
+  }
+
+  capturarImagen(e) {
+    const archivo = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    if (!archivo.type.match(/image-*/)) {
+      this.listaMoldes.modulos.principal.notifica = {
+        mensaje: 'El archivo que se intentó cargar no es una imagen, por favor intente de nuevo.',
+        color: 'danger-color',
+        nombre: '¡Solo imágenes!',
+        estado: true
+      };
+      this.datos.imagen = null;
+      $('#modalNotifica').modal('show');
+    } else {
+      const reader = new FileReader();
+      reader.onload = this.manejarImagenCargada.bind(this);
+      reader.readAsDataURL(archivo);
+    }
+  }
+
+  manejarImagenCargada(e) {
+    const reader = e.target;
+    this.imageSrc = reader.result;
   }
 
 }

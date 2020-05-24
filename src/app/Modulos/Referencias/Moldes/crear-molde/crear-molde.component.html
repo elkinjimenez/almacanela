@@ -59,8 +59,14 @@
             <div class="col-12 mb-4">
               <label for="">Carga una imagen del molde</label>
               <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                <label class="custom-file-label" for="customFileLang">Seleccionar imagen</label>
+                <input [(ngModel)]="datos.imagen" accept="image/*" (change)="capturarImagen($event)" type="file"
+                  class="custom-file-input" id="imagenACargar" lang="es">
+                <label class="custom-file-label" for="imagenACargar">Seleccionar imagen</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="image-upload">
+                <img [src]="imageSrc" />
               </div>
             </div>
             <div class="col-6">
